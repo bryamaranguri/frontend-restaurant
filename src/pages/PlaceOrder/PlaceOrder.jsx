@@ -37,41 +37,41 @@ const PlaceOrder = () => {
     return (
         <div className='place-order'>
             <div className="place-order-left">
-                <p className='title'>Delivery Information</p>
+                <p className='title'>Informacion de entrega</p>
                 <div className="multi-field">
-                    <input type="text" name='firstName' onChange={onChangeHandler} value={data.firstName} placeholder='First name' />
-                    <input type="text" name='lastName' onChange={onChangeHandler} value={data.lastName} placeholder='Last name' />
+                    <input type="text" name='firstName' onChange={onChangeHandler} value={data.firstName} placeholder='Nombre' />
+                    <input type="text" name='lastName' onChange={onChangeHandler} value={data.lastName} placeholder='Apellido' />
                 </div>
-                <input type="email" name='email' onChange={onChangeHandler} value={data.email} placeholder='Email address' />
-                <input type="text" name='street' onChange={onChangeHandler} value={data.street} placeholder='Street' />
+                <input type="email" name='email' onChange={onChangeHandler} value={data.email} placeholder='Email' />
+                <input type="text" name='street' onChange={onChangeHandler} value={data.street} placeholder='Calle' />
                 <div className="multi-field">
-                    <input type="text" name='city' onChange={onChangeHandler} value={data.city} placeholder='City' />
-                    <input type="text" name='state' onChange={onChangeHandler} value={data.state} placeholder='State' />
+                    <input type="text" name='city' onChange={onChangeHandler} value={data.city} placeholder='Ciudad' />
+                    <input type="text" name='state' onChange={onChangeHandler} value={data.state} placeholder='Estado' />
                 </div>
                 <div className="multi-field">
-                    <input type="text" name='zipcode' onChange={onChangeHandler} value={data.zipcode} placeholder='Zip code' />
-                    <input type="text" name='country' onChange={onChangeHandler} value={data.country} placeholder='Country' />
+                    <input type="text" name='zipcode' onChange={onChangeHandler} value={data.zipcode} placeholder='Codigo postal' />
+                    <input type="text" name='country' onChange={onChangeHandler} value={data.country} placeholder='Pais' />
                 </div>
-                <input type="text" name='phone' onChange={onChangeHandler} value={data.phone} placeholder='Phone' />
+                <input type="text" name='phone' onChange={onChangeHandler} value={data.phone} placeholder='Telefono' />
             </div>
             <div className="place-order-right">
                 <div className="cart-total">
-                    <h2>Cart Totals</h2>
+                    <h2>Total del carrito</h2>
                     <div>
                         <div className="cart-total-details"><p>Subtotal</p><p>${getTotalCartAmount()}</p></div>
                         <hr />
-                        <div className="cart-total-details"><p>Delivery Fee</p><p>${getTotalCartAmount() === 0 ? 0 : 5}</p></div>
+                        <div className="cart-total-details"><p>Tarifa de entrega</p><p>${getTotalCartAmount() === 0 ? 0 : 5}</p></div>
                         <hr />
                         <div className="cart-total-details"><b>Total</b><b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5}</b></div>
                     </div>
                 </div>
                 <div className="payment-options">
-                    <h2>Select Payment Method</h2>
+                    <h2>Seleccionar Metodo de Pago</h2>
                     <div className="payment-option">
                         <img src={assets.selector_icon} alt="" />
-                        <p>COD ( Cash On Delivery )</p>
+                        <p>COD ( VISA )</p>
                     </div>
-                    <button onClick={() => placeOrder(data)}>PLACE ORDER</button>
+                    <button onClick={() => placeOrder(data)}>REALIZAR PEDIDO</button>
                 </div>
 
             </div>
