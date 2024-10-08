@@ -1,9 +1,11 @@
 .header{
   height: 34vw;
   margin: 30px auto;
-  background: url('/header_img.png') no-repeat;
-  background-size:contain;
+  background: url('../src/assets/restraunte.jpg') no-repeat;
+  background-size: 100%;
   position: relative;
+
+
 }
 .header-contents{
   position: absolute;
@@ -18,7 +20,7 @@
 }
 .header-contents h2{
   font-weight:500;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: max(4.5vw,22px);
 }
 .header-contents p{
@@ -27,7 +29,7 @@
 }
 .header-contents button{
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 500;
   padding: 1vw 2.3vw;
   background: #C62828;
