@@ -17,7 +17,7 @@ const LoginPopup = ({setShowLogin}) => {
                 <input type="email" placeholder='Your email' />
                 <input type="password" placeholder='Password' />
             </div>
-            <button>{currState==="Login"?"Login":"Create account"}</button>
+            <button>{currState==="Login"?"Login":"Crear cuenta"}</button>
             <div className="login-popup-condition">
                 <input type="checkbox" name="" id="" />
                 <p>Al continuar, acepto los términos de uso y la política de privacidad.</p>
