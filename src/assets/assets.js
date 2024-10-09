@@ -1,4 +1,5 @@
 import basket_icon from "./basket_icon.png";
+import basket_icon_hover from "./basket_icon_hover.apng";
 import logo from "./logo.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
@@ -58,6 +59,7 @@ import selector_icon from "./selector_icon.png";
 export const assets = {
   logo,
   basket_icon,
+  basket_icon_hover,
   header_img,
   search_icon,
   rating_starts,
