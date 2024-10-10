@@ -1,5 +1,5 @@
 import basket_icon from "./basket_icon.png";
-import basket_icon_hover from "./basket_icon_hover.apng";
+import basket_icon_hover from "./basket_icon_hover.gif";
 import logo from "./logo.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";

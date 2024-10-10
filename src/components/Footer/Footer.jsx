@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <h1>Central Restaurant</h1>
+            <h1>CENTRAL RESTAURANT</h1>
             <p>Bienvenidos a Central, el corazón de la gastronomía peruana en Lima. En nuestro restaurante, te invitamos a explorar una experiencia culinaria única, donde cada plato es una celebración de los sabores y tradiciones peruanas. Nuestro chef utiliza ingredientes frescos y de alta calidad para crear auténticas delicias que reflejan la rica diversidad de nuestra cultura. Desde ceviches frescos hasta exquisitas causas y platos de fusión, cada bocado te llevará en un viaje a través de la riqueza gastronómica de Perú. Ven y descubre por qué Central es el destino perfecto para los amantes de la buena comida.</p>
             <div className="footer-social-icons">
                 <a href="https://www.facebook.com/CentralRestaurante">
