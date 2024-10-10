@@ -5,9 +5,17 @@ import { Link } from 'react-router-dom'
 import { StoreContext } from '../../Context/StoreContext'
 
 const Navbar = ({setShowLogin}) => {
-
   const [menu,setMenu] = useState("home");
+  const [isAnimating, setIsAnimating] = useState(false);
   const {getTotalCartAmount} = useContext(StoreContext);
+
+  const handleSearchClick = () => {
+    setIsAnimating(true);
+    // Volver al icono original después de 1 segundo (duración de la animación)
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 3000);
+  };
 
   return (
     <div className='navbar'>
@@ -19,13 +27,21 @@ const Navbar = ({setShowLogin}) => {
         <a href='#footer' onClick={()=>setMenu("contact")} className={`${menu==="contact"?"active":""}`}>CONTÁCTANOS</a>
       </ul>
       <div className="navbar-right">
-        <Link to='/cart' className='navbar-search-icon'>
-          <img src={assets.search_icon} alt="" class="basket-icon"/>
+        <Link to='/cart' className='navbar-search-icon' onClick={handleSearchClick}>
+          <img
+            src={isAnimating ? assets.search_icon_click : assets.search_icon}
+            alt=""
+            className="basket-icon"
+          />
         </Link>
         {/* <img src={assets.search_icon} alt="" /> */}
         <Link to='/cart' className='navbar-basket-icon'>
-          <img src={assets.basket_icon} alt="" class="basket-icon"/>
-          <div className={getTotalCartAmount()>0?"dot":""}></div>
+          {/* Mostrar el GIF si hay artículos en el carrito, de lo contrario el icono estático */}
+          <img
+            src={getTotalCartAmount() > 0 ? assets.basket_icon_full : assets.basket_icon}
+            alt="Carrito"
+            className="basket-icon"
+          />
         </Link>
         <button onClick={()=>setShowLogin(true)}>Ingresar</button>
       </div>

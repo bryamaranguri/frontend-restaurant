@@ -1,8 +1,9 @@
 import basket_icon from "./basket_icon.png";
-import basket_icon_hover from "./basket_icon_hover.gif";
+import basket_icon_full from "./basket_icon_full.gif";
 import logo from "./logo.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
+import search_icon_click from "./search_icon_click.gif";
 import menu_1 from "./menu_1.png";
 import menu_2 from "./menu_2.png";
 import menu_3 from "./menu_3.png";
@@ -59,9 +60,10 @@ import selector_icon from "./selector_icon.png";
 export const assets = {
   logo,
   basket_icon,
-  basket_icon_hover,
+  basket_icon_full,
   header_img,
   search_icon,
+  search_icon_click,
   rating_starts,
   add_icon_green,
   add_icon_white,

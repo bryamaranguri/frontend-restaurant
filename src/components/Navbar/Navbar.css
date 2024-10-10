@@ -7,9 +7,9 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   /* background: linear-gradient(to bottom right, #2ABBAE, #1E3A5F); */
-  background: linear-gradient(to bottom right, #FFB300 -150%, #6D4C41 );
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  background: linear-gradient(to bottom right, #FFB300 -200%, #6D4C41 );
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: 2px;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -64,6 +64,14 @@ height: auto;
 .basket-icon {
   width: 35px;
   height: auto;
+}
+
+.basket-icon-full {
+  width: 35px;  /* Ajusta según el tamaño del GIF */
+  height: 35px;
+  /* position: absolute;
+  top: -5px;
+  right: -5px; */
 }
 
 .navbar-right button {
