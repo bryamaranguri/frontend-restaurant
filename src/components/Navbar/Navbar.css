@@ -3,12 +3,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom right, #2ABBAE, #1E3A5F);
-  border-radius: 5px;
+  /* background-color: #6d4c41; */
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  /* background: linear-gradient(to bottom right, #2ABBAE, #1E3A5F); */
+  background: linear-gradient(to bottom right, #FFB300 -200%, #6D4C41 );
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: 2px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 .navbar .logo {
@@ -22,7 +26,7 @@
   list-style: none;
   gap: 20px;
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .navbar-menu .active {
@@ -38,6 +42,8 @@
 
 .navbar-search-icon{
 position: relative;
+width: 35px;
+height: auto;
 }
 
 .navbar-search-icon .dot{
@@ -50,9 +56,22 @@ position: relative;
   right: -8px;
 }
 
+.search-icon {
+  width: 10px;
+  height: auto;
+}
+
 .basket-icon {
   width: 35px;
   height: auto;
+}
+
+.basket-icon-full {
+  width: 35px;  /* Ajusta según el tamaño del GIF */
+  height: 35px;
+  /* position: absolute;
+  top: -5px;
+  right: -5px; */
 }
 
 .navbar-right button {
@@ -68,7 +87,7 @@ position: relative;
 }
 
 .navbar-right button:hover {
-  background: #b2b8be;
+  background: #2E7D32;
 }
 
 @media (max-width:1050px) {

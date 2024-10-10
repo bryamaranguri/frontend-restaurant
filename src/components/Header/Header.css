@@ -1,9 +1,10 @@
 .header{
   height: 34vw;
   margin: 30px auto;
-  background: url('../src/assets/restraunte.jpg') no-repeat;
+  background: url('../src/assets/restaurante.jpg') no-repeat;
   background-size: 100%;
   position: relative;
+  border-radius: 10px;
 
 
 }
@@ -17,6 +18,7 @@
   bottom: 10%;
   left: 6vw;
   animation: fadeIn 3s;
+  border-radius: 5px;
 }
 .header-contents h2{
   font-weight:500;
@@ -25,7 +27,7 @@
 }
 .header-contents p{
   color: white;
-  font-size: 1vw;
+  font-size: 1.8vw;
 }
 .header-contents button{
   border: none;
