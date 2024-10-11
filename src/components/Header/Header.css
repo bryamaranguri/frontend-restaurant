@@ -24,10 +24,12 @@
   font-weight:500;
   color: rgb(255, 255, 255);
   font-size: max(4.5vw,22px);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para el h2 */
 }
 .header-contents p{
   color: white;
   font-size: 1.8vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); /* Sombra para el p */
 }
 .header-contents button{
   border: none;
