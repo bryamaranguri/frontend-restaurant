@@ -2,6 +2,9 @@
   margin: 100px 0px;
 }
 
+.cart h2 {
+  color:#c62828;
+}
 .cart hr {
   height: 1px;
   background-color: #FFFFFF;
@@ -79,7 +82,7 @@
   flex: 1;
 }
 .cart-promocode p{
-  color: #6d4c41;
+  color: #c62828;
 }
 .cart-promocode-input{
   margin-top: 10px;

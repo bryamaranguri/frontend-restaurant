@@ -13,9 +13,9 @@ const LoginPopup = ({setShowLogin}) => {
                 <h2>{currState}</h2> <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
             </div>
             <div className="login-popup-inputs">
-                {currState==="Sign Up"?<input type="text" placeholder='Your name' />:<></>}
-                <input type="email" placeholder='Your email' />
-                <input type="password" placeholder='Password' />
+                {currState==="Sign Up"?<input type="text" placeholder='Nombre' />:<></>}
+                <input type="email" placeholder='E-mail' />
+                <input type="password" placeholder='Contraseña' />
             </div>
             <button>{currState==="Login"?"Login":"Crear cuenta"}</button>
             <div className="login-popup-condition">

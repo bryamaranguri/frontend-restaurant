@@ -1,7 +1,9 @@
 import basket_icon from "./basket_icon.png";
+import basket_icon_full from "./basket_icon_full.gif";
 import logo from "./logo.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
+import search_icon_click from "./search_icon_click.gif";
 import menu_1 from "./menu_1.png";
 import menu_2 from "./menu_2.png";
 import menu_3 from "./menu_3.png";
@@ -44,7 +46,7 @@ import food_30 from "./food_30.png";
 import food_31 from "./food_31.png";
 import food_32 from "./food_32.png";
 
-import add_icon_white from "./add_icon_white.png";
+import add_icon_item from "./add_icon_item.gif";
 import add_icon_green from "./add_icon_green.png";
 import remove_icon_red from "./remove_icon_red.png";
 import app_store from "./app_store.png";
@@ -58,11 +60,13 @@ import selector_icon from "./selector_icon.png";
 export const assets = {
   logo,
   basket_icon,
+  basket_icon_full,
   header_img,
   search_icon,
+  search_icon_click,
   rating_starts,
   add_icon_green,
-  add_icon_white,
+  add_icon_item,
   remove_icon_red,
   app_store,
   play_store,

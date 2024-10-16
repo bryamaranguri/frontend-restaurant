@@ -10,6 +10,7 @@
 .explore-menu-text{
   max-width: 60%;
   color: #2E7D32;
+  font-size: 20px;
 }
 .explore-menu-list{
   display: flex;
@@ -49,6 +50,6 @@
 @media (max-width:1050px) {
   .explore-menu-text{
       max-width: 100%;
-      font-size: 14px;
+      /* font-size: 14px; */
   }
 }

@@ -1,9 +1,10 @@
 .header{
   height: 34vw;
   margin: 30px auto;
-  background: url('../src/assets/restraunte.jpg') no-repeat;
+  background: url('../src/assets/restaurante.jpg') no-repeat;
   background-size: 100%;
   position: relative;
+  border-radius: 10px;
 
 
 }
@@ -17,15 +18,18 @@
   bottom: 10%;
   left: 6vw;
   animation: fadeIn 3s;
+  border-radius: 5px;
 }
 .header-contents h2{
   font-weight:500;
   color: rgb(255, 255, 255);
   font-size: max(4.5vw,22px);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para el h2 */
 }
 .header-contents p{
   color: white;
-  font-size: 1vw;
+  font-size: 1.8vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); /* Sombra para el p */
 }
 .header-contents button{
   border: none;
