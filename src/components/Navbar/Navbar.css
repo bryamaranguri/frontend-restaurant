@@ -7,7 +7,7 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   /* background: linear-gradient(to bottom right, #2ABBAE, #1E3A5F); */
-  background: linear-gradient(to bottom, #FFB300 -200%, #C62828 );
+  background: linear-gradient(to bottom, #ffb300 -200%, #c62828);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 2px;
@@ -25,32 +25,33 @@
   display: flex;
   list-style: none;
   gap: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
 }
 
 .navbar-menu .active {
   padding-bottom: 2px;
-  border-bottom: 2px solid #FFB300;
+  border-bottom: 2px solid #ffb300;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin: 0;
 }
 
-.navbar-search-icon{
-position: relative;
-width: 35px;
-height: auto;
+.navbar-search-icon {
+  position: relative;
+  width: 35px;
+  height: auto;
 }
 
-.navbar-search-icon .dot{
+.navbar-search-icon .dot {
   position: absolute;
   min-width: 10px;
   min-height: 10px;
-  background-color: #FFB300;
+  background-color: #ffb300;
   border-radius: 5px;
   top: -8px;
   right: -8px;
@@ -67,7 +68,7 @@ height: auto;
 }
 
 .basket-icon-full {
-  width: 35px;  /* Ajusta según el tamaño del GIF */
+  width: 35px; /* Ajusta según el tamaño del GIF */
   height: 35px;
   /* position: absolute;
   top: -5px;
@@ -77,68 +78,103 @@ height: auto;
 .navbar-right button {
   background: transparent;
   font-size: 16px;
-  color: #FFFFFF;
-  border: 1px solid #F7F7F7;
-  padding: 10px 30px;
+  color: #ffffff;
+  border: 1px solid #f7f7f7;
+  padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
-  margin: 20px;
+  margin: 15px;
 }
 
 .navbar-right button:hover {
-  background: #2E7D32;
+  background: #2e7d32;
+}
+.navbar-profile {
+  position: relative;
+  margin-right: 30px;
+}
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+}
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff2ef;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  outline: 2px solid white;
+  list-style: none;
+}
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
-@media (max-width:1050px) {
+.nav-profile-dropdown img {
+  width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+  color: tomato;
+}
+
+@media (max-width: 1050px) {
   .navbar .logo {
-      width: 140px;
+    width: 140px;
   }
 
   .navbar-menu {
-      gap: 20px;
-      font-size: 17px;
+    gap: 20px;
+    font-size: 17px;
   }
 
   .navbar-right {
-      gap: 30px;
+    gap: 30px;
   }
 
   .navbar-right img {
-      width: 22px;
+    width: 22px;
   }
 
   .navbar-right button {
-      padding: 8px 25px;
+    padding: 8px 25px;
   }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .navbar .logo {
-      width: 120px;
+    width: 120px;
   }
 
   .navbar-menu {
-      gap: 15px;
-      font-size: 16px;
+    gap: 15px;
+    font-size: 16px;
   }
 
   .navbar-right {
-      gap: 20px;
+    gap: 20px;
   }
 
   .navbar-right img {
-      width: 20px;
+    width: 20px;
   }
 
   .navbar-right button {
-      font-size: 15px;
-      padding: 7px 20px;
+    font-size: 15px;
+    padding: 7px 20px;
   }
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .navbar-menu {
-      display: none;
+    display: none;
   }
 }
