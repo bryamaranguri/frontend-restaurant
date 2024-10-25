@@ -18,24 +18,28 @@ const PlaceOrder = () => {
         phone: ""
     })
 
-    const { getTotalCartAmount, placeOrder } = useContext(StoreContext);
-
-    const navigate = useNavigate();
+    const { getTotalCartAmount, token,food_list,carItems,url } = useContext(StoreContext);
 
     const onChangeHandler = (event) => {
-        const name = event.target.name
-        const value = event.target.value
-        setData(data => ({ ...data, [name]: value }))
+        const name = event.target.name;
+        const value = event.target.value;
+        setData(data=>({...data,[name]:value}))
     }
-
-    useEffect(() => {
-        if (getTotalCartAmount() === 0) {
-            navigate('/')
-        }
-    }, [])
-
+    const placeOrder = async (event) =>{
+        event.preventDefault();
+        let orderItems = [];
+        food_list.map((item)=>{
+            if (carItems[item._id]>0){
+                let itemInfo = item;
+                itemInfo["quantity"] = carItems[item._id];
+                orderItems.push(itemInfo)
+            }
+        })
+        console.log(orderItems)
+    }
     return (
-        <div className='place-order'>
+        <form onSubmit={placeOrder} className='place-order'>
+            <div className='place-order'>
             <div className="place-order-left">
                 <p className='title'>Informacion de entrega</p>
                 <div className="multi-field">
@@ -66,16 +70,13 @@ const PlaceOrder = () => {
                     </div>
                 </div>
                 <div className="payment-options">
-                    <h2>Seleccionar Metodo de Pago</h2>
-                    <div className="payment-option">
-                        <img src={assets.selector_icon} alt="" />
-                        <p>COD ( VISA )</p>
-                    </div>
-                    <button onClick={() => placeOrder(data)}>REALIZAR PEDIDO</button>
+
+                    <button type='submit'>REALIZAR PEDIDO</button>
                 </div>
 
             </div>
         </div>
+        </form>
     )
 }
 
