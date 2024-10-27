@@ -4,7 +4,8 @@ import { StoreContext } from '../../Context/StoreContext';
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url, currency, deliveryCharge } = useContext(StoreContext);
+
   const navigate = useNavigate();
 
   return (
@@ -24,7 +25,7 @@ const Cart = () => {
           if (cartItems[item.id] > 0) {
             return (
               <div key={item.id} className="cart-items-title cart-items-item">
-                <img src={`http://localhost:3000/uploads/${item.image}`} alt={item.name} className="cart-item-image" />
+                <img src={url+"/images/"+item.image} alt={item.name} className="cart-item-image" />
                 <p>{item.name}</p>
                 <p>S/. {item.price.toFixed(2)}</p>
                 <div>{cartItems[item.id]}</div>
@@ -38,26 +39,19 @@ const Cart = () => {
         })}
       </div>
       <div className="cart-bottom">
-  <div className="cart-total">
-    <h2>Mi Carrito de Compra</h2>
-    <div>
-      <div className="cart-total-details">
-        <p>Subtotal</p>
-        <p>S/. {getTotalCartAmount().toFixed(2)}</p>
+        <div className="cart-total">
+          <h2>Cart Totals</h2>
+          <div>
+            <div className="cart-total-details"><p>Subtotal</p><p>{currency}{getTotalCartAmount()}</p></div>
+            <hr />
+            <div className="cart-total-details"><p>Delivery Fee</p><p>{currency}{getTotalCartAmount()===0?0:deliveryCharge}</p></div>
+            <hr />
+            <div className="cart-total-details"><b>Total</b><b>{currency}{getTotalCartAmount()===0?0:getTotalCartAmount()+deliveryCharge}</b></div>
+          </div>
+          <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+        </div>
+
       </div>
-      <hr />
-      <div className="cart-total-details">
-        <p>Tarifa de Envío</p>
-        <p>S/. {getTotalCartAmount() === 0 ? "0.00" : "5.00"}</p>
-      </div>
-      <hr />
-      <div className="cart-total-details">
-        <b>Total</b>
-        <b>S/. {(getTotalCartAmount() + (getTotalCartAmount() === 0 ? 0 : 5)).toFixed(2)}</b>
-      </div>
-    </div>
-    <button onClick={() => navigate('/order')}>Ir a Pagar</button>
-  </div>
 
   <div className="cart-promocode">
     <div>
@@ -70,7 +64,6 @@ const Cart = () => {
   </div>
 </div>
 
-    </div>
   );
 }
 
