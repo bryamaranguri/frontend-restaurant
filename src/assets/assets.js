@@ -4,6 +4,7 @@ import logo from "./logo.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
 import search_icon_click from "./search_icon_click.gif";
+import paquete from "./paquete.png";
 import menu_1 from "./menu_1.png";
 import menu_2 from "./menu_2.png";
 import menu_3 from "./menu_3.png";
@@ -76,7 +77,8 @@ export const assets = {
   twitter_icon,
   cross_icon,
   selector_icon,
-  profile_icon
+  profile_icon,
+  paquete,
 };
 
 export const menu_list = [
