@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [food_list, setFoodList] = useState([]);
-  const url = "http://localhost:3000";
+  const url = "http://backend-central-production-6fda.up.railway.app/";
   const [token, setToken] = useState("");
   const currency = "$";
   const deliveryCharge = 5;
