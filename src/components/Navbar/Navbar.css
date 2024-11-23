@@ -1,125 +1,133 @@
 .navbar {
-  padding: 20px 0px;
+  width: 100%;
+  padding: 0.68vw 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #6d4c41; */
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  /* background: linear-gradient(to bottom right, #2ABBAE, #1E3A5F); */
-  background: linear-gradient(to bottom, #ffb300 -200%, #c62828);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 2px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #af0000 0%, #f78400 100%);
+  box-shadow: 0 0.27vw 1.35vw rgba(0, 0, 0, 0.2);
 }
 
 .navbar .logo {
-  width: 150px;
-  margin: 20px;
-  border-radius: 6px;
+  width: 8vw;
+  margin: 0.68vw;
+  border-radius: 0.41vw;
+  margin-left: 5.41vw;
+}
+
+.navbar-title {
+  font-size: 2.71vw;
+  font-family: "Basker";
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 1.35vw;
+  text-align: center;
 }
 
 .navbar-menu {
   display: flex;
+  font-family: "Basker";
   list-style: none;
-  gap: 20px;
+  gap: 2.71vw;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.35vw;
 }
 
 .navbar-menu .active {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #ffb300;
+  padding-bottom: 0.14vw;
+  border-bottom: 0.14vw solid #ffb300;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 2.71vw;
   margin: 0;
+  margin-right: 5.41vw;
 }
 
 .navbar-search-icon {
   position: relative;
-  width: 35px;
+  width: 2.37vw;
   height: auto;
 }
 
 .navbar-search-icon .dot {
   position: absolute;
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 0.68vw;
+  min-height: 0.68vw;
   background-color: #ffb300;
-  border-radius: 5px;
-  top: -8px;
-  right: -8px;
+  border-radius: 50%;
+  top: -0.54vw;
+  right: -0.54vw;
 }
 
 .search-icon {
-  width: 10px;
+  width: 0.68vw;
   height: auto;
 }
 
 .basket-icon {
-  width: 35px;
+  width: 2.37vw;
   height: auto;
 }
 
 .basket-icon-full {
-  width: 35px; /* Ajusta según el tamaño del GIF */
-  height: 35px;
-  /* position: absolute;
-  top: -5px;
-  right: -5px; */
+  width: 2.37vw;
+  height: 2.37vw;
 }
 
 .navbar-right button {
   background: transparent;
-  font-size: 16px;
+  font-family: "Basker";
+  font-size: 1.08vw;
   color: #ffffff;
-  border: 1px solid #f7f7f7;
-  padding: 10px 10px;
-  border-radius: 10px;
+  border: 0.07vw solid #f7f7f7;
+  padding: 0.68vw 0.68vw;
+  border-radius: 0.68vw;
   cursor: pointer;
   transition: 0.3s;
-  margin: 15px;
+  margin: 1.01vw;
 }
 
 .navbar-right button:hover {
   background: #2e7d32;
 }
+
 .navbar-profile {
   position: relative;
-  margin-right: 30px;
+  margin-right: 2.03vw;
 }
+
 .nav-profile-dropdown {
+  font-family: "Basker";
   position: absolute;
   display: none;
   right: 0;
   z-index: 1;
 }
+
 .navbar-profile:hover .nav-profile-dropdown {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.68vw;
   background-color: #fff2ef;
-  padding: 12px 25px;
-  border-radius: 4px;
-  border: 1px solid tomato;
-  outline: 2px solid white;
+  padding: 0.81vw 1.69vw;
+  border-radius: 0.27vw;
+  border: 0.07vw solid tomato;
+  outline: 0.14vw solid white;
   list-style: none;
 }
+
 .nav-profile-dropdown li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.68vw;
   cursor: pointer;
 }
 
 .nav-profile-dropdown img {
-  width: 20px;
+  width: 1.35vw;
 }
 
 .nav-profile-dropdown li:hover {
@@ -128,48 +136,48 @@
 
 @media (max-width: 1050px) {
   .navbar .logo {
-    width: 140px;
+    width: 8vw;
   }
 
   .navbar-menu {
-    gap: 20px;
-    font-size: 17px;
+    gap: 1.35vw;
+    font-size: 1.15vw;
   }
 
   .navbar-right {
-    gap: 30px;
+    gap: 2.03vw;
   }
 
   .navbar-right img {
-    width: 22px;
+    width: 1.49vw;
   }
 
   .navbar-right button {
-    padding: 8px 25px;
+    padding: 0.54vw 1.69vw;
   }
 }
 
 @media (max-width: 900px) {
   .navbar .logo {
-    width: 120px;
+    width: 8vw;
   }
 
   .navbar-menu {
-    gap: 15px;
-    font-size: 16px;
+    gap: 1.01vw;
+    font-size: 1.08vw;
   }
 
   .navbar-right {
-    gap: 20px;
+    gap: 1.35vw;
   }
 
   .navbar-right img {
-    width: 20px;
+    width: 1.35vw;
   }
 
   .navbar-right button {
-    font-size: 15px;
-    padding: 7px 20px;
+    font-size: 1.01vw;
+    padding: 0.47vw 1.35vw;
   }
 }
 
@@ -177,4 +185,25 @@
   .navbar-menu {
     display: none;
   }
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }

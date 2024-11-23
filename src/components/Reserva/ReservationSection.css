@@ -1,0 +1,118 @@
+.reservation-section {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  margin-top: 9vw;
+  border: 10px solid rgba(192, 192, 192, 0.164); /* Borde blanco de 5px */
+  box-sizing: border-box; /* Asegura que el borde esté dentro del tamaño definido */
+  border-radius: 1%;
+}
+
+.reservation-image {
+  flex: 1;
+  background: linear-gradient(to bottom, #3b3932 0%, #000000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #3b3932 0%, #000000 100%);
+  padding: 20px;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form {
+  width: 100%;
+  max-width: 27vw;
+}
+
+.reservation-form h2 {
+  text-align: center;
+  font-family: "Basker";
+  margin-bottom: 20px;
+  font-size: 3.8rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.reservation-form label {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #80c0dd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.reservation-form button {
+  width: 100%;
+  max-width: 20vw;
+  margin-left: 3.5vw;
+  margin-right: 3.5vw;
+  padding: 15px;
+  background-color: #bd230f;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 30px;
+}
+.reservation-form button:hover {
+  background-color: #ffb937;
+  color: rgb(12, 12, 0);
+}
+
+.reservation-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

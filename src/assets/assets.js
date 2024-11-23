@@ -79,6 +79,7 @@ export const assets = {
   selector_icon,
   profile_icon,
   paquete,
+  food_16,
 };
 
 export const menu_list = [
