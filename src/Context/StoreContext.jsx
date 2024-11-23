@@ -7,11 +7,10 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [food_list, setFoodList] = useState([]);
-  const url = "https://backend-central-production-6fda.up.railway.app";
+  const url = "https://backend-central-production-f267.up.railway.app";
   const [token, setToken] = useState("");
   const currency = "$";
   const deliveryCharge = 5;
-
 
   const addToCart = async (itemId) => {
     console.log("Adding item:", itemId);
@@ -21,12 +20,12 @@ const StoreContextProvider = (props) => {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
     if (token) {
-        await axios.post(url + "/api/cart/add",
-          { itemId },
-          { headers: { Authorization: `Bearer ${token}` } }
-        );
-      }
-
+      await axios.post(
+        url + "/api/cart/add",
+        { itemId },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+    }
   };
 
   const removeFromCart = (itemId) => {
@@ -37,9 +36,7 @@ const StoreContextProvider = (props) => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = food_list.find(
-          (product) => product.id === Number(item)
-        );
+        let itemInfo = food_list.find((product) => product.id === Number(item));
         if (itemInfo) {
           totalAmount += itemInfo.price * cartItems[item];
         }
@@ -47,7 +44,6 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
-
 
   const fetchFoodList = async () => {
     try {
@@ -59,9 +55,13 @@ const StoreContextProvider = (props) => {
   };
 
   const loadCartData = async (token) => {
-    const response = await axios.post(url + "/api/cart/get", {}, {
-      headers: { Authorization: `Bearer ${token}` }
-    });
+    const response = await axios.post(
+      url + "/api/cart/get",
+      {},
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     setCartItems(response.data.cartData);
   };
 
@@ -75,7 +75,6 @@ const StoreContextProvider = (props) => {
     }
     loadData();
   }, []);
-
 
   const placeOrder = (deliveryData) => {
     console.log(deliveryData);
@@ -95,7 +94,7 @@ const StoreContextProvider = (props) => {
     loadCartData,
     setCartItems,
     currency,
-    deliveryCharge
+    deliveryCharge,
   };
 
   return (

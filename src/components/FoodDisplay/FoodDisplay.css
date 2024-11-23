@@ -1,17 +1,42 @@
-.food-display{
+.food-display {
   margin-top: 30px;
+  font-family: "Basker";
 }
-.food-display h2{
-  font-size: max(2vw,27px);
-  font-weight: 600;
-  color: #C62828;
-
+.food-display h2 {
+  font-size: max(2vw, 27px);
+  font-family: "Basker";
+  font-weight: 500;
+  color: #ffe7a4;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-.food-display-list{
+.food-display-list {
   display: flex;
+  font-family: "Basker";
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
   gap: 30px;
   row-gap: 50px;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basker";
+  src: url("./fonts/LibreBaskerville-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
