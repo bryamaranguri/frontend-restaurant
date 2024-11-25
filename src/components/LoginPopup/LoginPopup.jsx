@@ -5,7 +5,7 @@ import { StoreContext } from "../../Context/StoreContext";
 import axios from "axios";
 
 const LoginPopup = ({ setShowLogin }) => {
-  const { url, setToken } = useContext(StoreContext);
+  const { setToken } = useContext(StoreContext);
 
   const [currState, setCurrState] = useState("Sign Up");
   const [data, setData] = useState({
@@ -20,38 +20,34 @@ const LoginPopup = ({ setShowLogin }) => {
 
     setData((data) => ({ ...data, [name]: value }));
   };
-
   const onLogin = async (event) => {
     event.preventDefault();
-    let newUrl = url;
-    if (currState === "Sign Up") {
-      newUrl += "/api/user/register";
-    } else {
-      newUrl += "/api/user/login";
-    }
+
+    let newUrl = "https://backend-central-production-f267.up.railway.app";
+    newUrl +=
+      currState === "Sign Up" ? "/api/user/register" : "/api/user/login";
 
     try {
       const response = await axios.post(newUrl, data);
 
       if (response.data.success) {
-        // Guardar el token
-        setToken(response.data.token);
-        localStorage.setItem("token", response.data.token);
+        const { token, role } = response.data;
 
-        // Verificar el rol del usuario para redirigirlo al panel de administración si es admin
-        const role = response.data.role; // Asegúrate de que el backend te envíe el rol
+        // Guardar el token y el rol
+        setToken(token);
+        localStorage.setItem("token", token);
+        localStorage.setItem("role", role); // Almacena el rol para futuras verificaciones
 
+        // Redirigir según el rol
         if (role === "admin") {
-          // Redirigir al admin
-          window.location.href = "https://localhost:5174"; // Panel de admin
+          window.location.href = "http://localhost:5174"; // Panel de administración
         } else {
-          // Redirigir a la página principal o alguna otra página
-          window.location.href = "/"; // Redirigir a la página principal o dashboard de usuario
+          window.location.href = "/"; // Página principal o dashboard de usuario
         }
 
-        setShowLogin(false); // Cerrar el popup de login
+        setShowLogin(false); // Cierra el popup de login
       } else {
-        alert(response.data.message); // Mostrar el mensaje de error si no es exitoso
+        alert(response.data.message); // Manejo de error en la respuesta del backend
       }
     } catch (error) {
       console.error("Error in login:", error);
