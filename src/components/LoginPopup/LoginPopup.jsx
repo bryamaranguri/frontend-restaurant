@@ -30,14 +30,32 @@ const LoginPopup = ({ setShowLogin }) => {
       newUrl += "/api/user/login";
     }
 
-    const response = await axios.post(newUrl, data);
+    try {
+      const response = await axios.post(newUrl, data);
 
-    if (response.data.success) {
-      setToken(response.data.token);
-      localStorage.setItem("token", response.data.token);
-      setShowLogin(false);
-    } else {
-      alert(response.data.message);
+      if (response.data.success) {
+        // Guardar el token
+        setToken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+
+        // Verificar el rol del usuario para redirigirlo al panel de administración si es admin
+        const role = response.data.role; // Asegúrate de que el backend te envíe el rol
+
+        if (role === "admin") {
+          // Redirigir al admin
+          window.location.href = "https://localhost:5174"; // Panel de admin
+        } else {
+          // Redirigir a la página principal o alguna otra página
+          window.location.href = "/"; // Redirigir a la página principal o dashboard de usuario
+        }
+
+        setShowLogin(false); // Cerrar el popup de login
+      } else {
+        alert(response.data.message); // Mostrar el mensaje de error si no es exitoso
+      }
+    } catch (error) {
+      console.error("Error in login:", error);
+      alert("Error durante el login.");
     }
   };
 
