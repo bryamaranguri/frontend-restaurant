@@ -40,7 +40,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
         // Redirigir según el rol
         if (role === "admin") {
-          window.location.href = "http://localhost:5174"; // Panel de administración
+          window.location.href = "https://admin-restaurant-nine.vercel.app"; // Panel de administración
         } else {
           window.location.href = "/"; // Página principal o dashboard de usuario
         }
