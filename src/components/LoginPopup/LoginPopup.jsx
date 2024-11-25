@@ -5,7 +5,7 @@ import { StoreContext } from "../../Context/StoreContext";
 import axios from "axios";
 
 const LoginPopup = ({ setShowLogin }) => {
-  const { url, setToken } = useContext(StoreContext);
+  const { setToken } = useContext(StoreContext);
 
   const [currState, setCurrState] = useState("Sign Up");
   const [data, setData] = useState({
@@ -20,24 +20,38 @@ const LoginPopup = ({ setShowLogin }) => {
 
     setData((data) => ({ ...data, [name]: value }));
   };
-
   const onLogin = async (event) => {
     event.preventDefault();
-    let newUrl = url;
-    if (currState === "Sign Up") {
-      newUrl += "/api/user/register";
-    } else {
-      newUrl += "/api/user/login";
-    }
 
-    const response = await axios.post(newUrl, data);
+    let newUrl = "https://backend-central-production-f267.up.railway.app";
+    newUrl +=
+      currState === "Sign Up" ? "/api/user/register" : "/api/user/login";
 
-    if (response.data.success) {
-      setToken(response.data.token);
-      localStorage.setItem("token", response.data.token);
-      setShowLogin(false);
-    } else {
-      alert(response.data.message);
+    try {
+      const response = await axios.post(newUrl, data);
+
+      if (response.data.success) {
+        const { token, role } = response.data;
+
+        // Guardar el token y el rol
+        setToken(token);
+        localStorage.setItem("token", token);
+        localStorage.setItem("role", role); // Almacena el rol para futuras verificaciones
+
+        // Redirigir según el rol
+        if (role === "admin") {
+          window.location.href = "http://localhost:5174"; // Panel de administración
+        } else {
+          window.location.href = "/"; // Página principal o dashboard de usuario
+        }
+
+        setShowLogin(false); // Cierra el popup de login
+      } else {
+        alert(response.data.message); // Manejo de error en la respuesta del backend
+      }
+    } catch (error) {
+      console.error("Error in login:", error);
+      alert("Error durante el login.");
     }
   };
 
