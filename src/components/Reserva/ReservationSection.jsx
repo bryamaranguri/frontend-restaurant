@@ -55,7 +55,7 @@ const ReservationSection = () => {
   return (
     <div className="reservation-section">
       <div className="reservation-image">
-        <img src={assets.food_16} alt="Decorative Restaurant" />
+        <img src={assets.reserva} alt="Decorative Restaurant" />
       </div>
       <div className="reservation-form-container">
         <form className="reservation-form" onSubmit={handleSubmit}>
