@@ -58,6 +58,8 @@ import twitter_icon from "./twitter_icon.png";
 import cross_icon from "./cross_icon.png";
 import selector_icon from "./selector_icon.png";
 import profile_icon from "./profile_icon.png";
+import restaurante from "./restaurante.png";
+import reserva from "./reserva.png";
 
 export const assets = {
   logo,
@@ -80,6 +82,8 @@ export const assets = {
   profile_icon,
   paquete,
   food_16,
+  restaurante,
+  reserva,
 };
 
 export const menu_list = [

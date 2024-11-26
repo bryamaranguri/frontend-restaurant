@@ -1,6 +1,6 @@
 .header {
   height: 40vw;
-  background: url("../src/assets/restaurante.jpg") no-repeat;
+  background: url("../src/assets/restaurante.png") no-repeat;
   background-size: 100%;
   position: relative;
 }
@@ -14,7 +14,9 @@
   bottom: 40%;
   left: 6vw;
   animation: fadeIn 3s;
-  border-radius: 5px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
 }
 .header-contents h2 {
   font-weight: 500;
