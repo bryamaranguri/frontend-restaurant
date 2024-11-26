@@ -47,11 +47,11 @@ const Navbar = ({ setShowLogin }) => {
           CARTA
         </a>
         <a
-          href="#app-download"
-          onClick={() => setMenu("mob-app")}
-          className={`${menu === "mob-app" ? "active" : ""}`}
+          href="#reserva"
+          onClick={() => setMenu("reserva")}
+          className={`${menu === "reserva" ? "active" : ""}`}
         >
-          CENTRAL APP
+          RESERVAS
         </a>
         <a
           href="#footer"
@@ -67,11 +67,11 @@ const Navbar = ({ setShowLogin }) => {
           className="navbar-search-icon"
           onClick={handleSearchClick}
         >
-          <img
+          {/* <img
             src={isAnimating ? assets.search_icon_click : assets.search_icon}
             alt=""
             className="basket-icon"
-          />
+          /> */}
         </Link>
         {/* <img src={assets.search_icon} alt="" /> */}
         <Link to="/cart" className="navbar-basket-icon">
