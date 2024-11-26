@@ -149,15 +149,18 @@
   }
 
   .navbar-right img {
-    width: 1.49vw;
+    width: 2vw;
   }
 
   .navbar-right button {
     padding: 0.54vw 1.69vw;
   }
+  .navbar-title {
+    font-size: 3vw;
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .navbar .logo {
     width: 8vw;
   }
@@ -176,14 +179,36 @@
   }
 
   .navbar-right button {
-    font-size: 1.01vw;
+    font-size: 2.5vw;
     padding: 0.47vw 1.35vw;
+  }
+  .navbar-title {
+    font-size: 4vw;
   }
 }
 
 @media (max-width: 750px) {
   .navbar-menu {
     display: none;
+  }
+  .navbar-right button {
+    font-size: 3.01vw;
+    padding: 0.47vw 1.35vw;
+  }
+  .navbar-title {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 500px) {
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-right button {
+    font-size: 4.5vw;
+    padding: 0.47vw 1.35vw;
+  }
+  .navbar-title {
+    font-size: 5vw;
   }
 }
 
