@@ -20,3 +20,7 @@
 .app-download-platforms img:hover{
   transform: scale(1.05);
 }
+
+.app-download p {
+  margin-top: 100px;
+}

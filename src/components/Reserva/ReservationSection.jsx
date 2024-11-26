@@ -53,7 +53,7 @@ const ReservationSection = () => {
   };
 
   return (
-    <div className="reservation-section">
+    <div className="reservation-section" id="reserva">
       <div className="reservation-image">
         <img src={assets.reserva} alt="Decorative Restaurant" />
       </div>
@@ -124,8 +124,13 @@ const ReservationSection = () => {
           </label>
           <button type="submit">Reservar</button>
         </form>
+        <hr />
       </div>
+
+
     </div>
+
+
   );
 };
 
