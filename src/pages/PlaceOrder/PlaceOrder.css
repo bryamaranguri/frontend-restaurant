@@ -1,8 +1,8 @@
 .place-order{
   display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 300px;
   margin: 100px 0px;
 }
 .place-order-left{
@@ -13,7 +13,7 @@
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 50px;
-  color: #6d4c41;
+  color: white;
 }
 .place-order-left input{
   margin-bottom: 15px;
@@ -66,6 +66,13 @@
 .payment-options button:hover {
   background-color: #2E7D32; /* Verde Hierba en hover */
 }
+
+h2{
+
+  color: #FFB300;
+}
+
+
 
 @media (max-width:700px) {
   .place-order{
