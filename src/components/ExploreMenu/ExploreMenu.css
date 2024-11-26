@@ -63,10 +63,14 @@
   border: none;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .explore-menu-text {
-    max-width: 100%;
-    /* font-size: 14px; */
+    display: none;
+  }
+}
+@media (max-width: 670px) {
+  .explore-menu-list-item p {
+    display: none;
   }
 }
 

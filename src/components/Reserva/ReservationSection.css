@@ -1,12 +1,13 @@
 .reservation-section {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: auto;
   width: 100%;
-  margin-top: 9vw;
   border: 10px solid rgba(192, 192, 192, 0.164); /* Borde blanco de 5px */
   box-sizing: border-box; /* Asegura que el borde esté dentro del tamaño definido */
   border-radius: 1%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .reservation-image {
@@ -43,15 +44,16 @@
 .reservation-form h2 {
   text-align: center;
   font-family: "Basker";
+  margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 3.8rem;
+  font-size: 3.5vw;
   color: #ffffff;
   margin-bottom: 40px;
   font-weight: 800;
 }
 
 .reservation-form label {
-  font-size: 1.3rem;
+  font-size: 2vw;
   display: block;
   margin-bottom: 10px;
   font-weight: 800;
@@ -84,6 +86,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 .reservation-form button:hover {
   background-color: #ffb937;
@@ -94,6 +97,50 @@
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+@media screen and (max-width: 800px) {
+  .reservation-section {
+    flex-direction: column; /* Cambia de fila a columna */
+    margin-bottom: 40px;
+  }
+
+  .reservation-image,
+  .reservation-form-container {
+    flex: none; /* Resetea el tamaño flexible para que ocupen toda la fila */
+    width: 100%; /* Ambos elementos ocuparán el ancho completo */
+  }
+
+  .reservation-image img {
+    border-radius: 0; /* Opcional: elimina el redondeo para mejor adaptación */
+  }
+
+  .reservation-form {
+    max-width: 90%; /* Ajusta el ancho máximo del formulario para pantallas pequeñas */
+  }
+
+  .reservation-form button {
+    max-width: 100%; /* Botón ocupa todo el ancho */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .reservation-form h2 {
+    text-align: center;
+    font-family: "Basker";
+    margin-bottom: 20px;
+    font-size: 7vw;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: 800;
+  }
+
+  .reservation-form label {
+    font-size: 6vw;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #ffffff;
+  }
 }
 
 @font-face {
