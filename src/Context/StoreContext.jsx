@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
   const [food_list, setFoodList] = useState([]);
   const url = "https://backend-central-production-f267.up.railway.app";
   const [token, setToken] = useState("");
-  const currency = "$";
+  const currency = "S/. ";
   const deliveryCharge = 5;
 
   const addToCart = async (itemId) => {
